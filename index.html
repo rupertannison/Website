@@ -171,7 +171,7 @@
   }
 
   /* CROSSWORD APP */
-  .crossword-app { max-width: 900px; margin: 0 auto; text-align: left; }
+  .crossword-app { max-width: 900px; margin: 0 auto; text-align: left; position: relative; }
   .current-clue {
     background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px;
     padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--ink);
@@ -233,7 +233,10 @@
     font-size: 18px; font-weight: 600; color: var(--ink-soft);
     padding: 6px 14px; background: rgba(0,0,0,0.04); border-radius: 999px;
     font-variant-numeric: tabular-nums;
-    min-width: 76px; text-align: center;
+    /* Fixed width — wide enough to fit "59:59" so the box never resizes
+       as the timer counts up (which would otherwise nudge the clues). */
+    width: 96px; text-align: center; box-sizing: border-box;
+    flex: 0 0 auto;
   }
   .crossword-clues {
     display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
@@ -267,8 +270,18 @@
     100% { transform: scale(1); opacity: 1; }
   }
   #xw-hidden-input {
-    position: absolute; opacity: 0; width: 1px; height: 1px;
-    pointer-events: none; left: -9999px;
+    /* Fixed to the viewport so it's always "visible" from the browser's
+       perspective — that stops mobile browsers from scrolling the page
+       when the input receives focus. Positioned roughly where the grid
+       sits on screen so focus never yanks the viewport around. */
+    position: fixed; top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px; height: 1px;
+    opacity: 0; border: 0; padding: 0; margin: 0;
+    /* 16px prevents iOS Safari from zooming (and re-scrolling) on focus. */
+    font-size: 16px;
+    pointer-events: none; z-index: -1;
+    -webkit-user-select: none; user-select: none;
   }
   @media (max-width: 820px) {
     .crossword-layout { grid-template-columns: 1fr; }
@@ -707,7 +720,7 @@
         state.activeRow = c.row;
         state.activeCol = c.col;
         state.direction = dir;
-        render();
+        render(true);
         focusInput();
       });
       ol.appendChild(li);
@@ -731,7 +744,7 @@
       state.activeRow = r;
       state.activeCol = c;
     }
-    render();
+    render(true);
     focusInput();
   }
 
@@ -743,7 +756,12 @@
     }
   }
 
-  function render() {
+  // `scrollClue` is opt-in: only scroll the clue list when the user
+  // explicitly navigates (clicks a cell/clue, uses arrow keys, etc.).
+  // On the initial render and while typing we pass `false`, so the page
+  // never auto-scrolls to the crossword on load and the viewport stays
+  // put while someone is typing on mobile.
+  function render(scrollClue = false) {
     // Clear prior state classes
     Object.values(cellMap).forEach(cell => {
       cell.classList.remove('highlighted', 'active');
@@ -777,7 +795,7 @@
         parseInt(li.dataset.num, 10) === clue.num &&
         li.dataset.dir === state.direction;
       li.classList.toggle('active', isActive);
-      if (isActive) {
+      if (isActive && scrollClue) {
         li.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       }
     });
@@ -822,19 +840,21 @@
     state.startTime = Date.now();
     state.timerInterval = setInterval(updateTimer, 500);
   }
-  function updateTimer() {
-    if (!state.startTime) return;
+  function currentTimerText() {
+    if (!state.startTime) return '00:00';
     const secs = Math.floor((Date.now() - state.startTime) / 1000);
     const mm = String(Math.floor(secs / 60)).padStart(2, '0');
     const ss = String(secs % 60).padStart(2, '0');
-    timerEl.textContent = mm + ':' + ss;
+    return mm + ':' + ss;
   }
+  function updateTimer() {
+    if (!state.startTime) return;
+    timerEl.textContent = currentTimerText();
+  }
+  // The completion message uses the exact same text shown in the timer
+  // so the two values always match.
   function formatElapsed() {
-    const secs = Math.floor((Date.now() - state.startTime) / 1000);
-    if (secs < 60) return secs + ' seconds';
-    const mm = Math.floor(secs / 60);
-    const ss = secs % 60;
-    return mm + ' minute' + (mm === 1 ? '' : 's') + ' ' + ss + ' seconds';
+    return currentTimerText();
   }
 
   function typeLetter(ch) {
@@ -875,28 +895,28 @@
       let nc = state.activeCol + 1;
       while (nc < COLS && isBlack(state.activeRow, nc)) nc++;
       if (nc < COLS) state.activeCol = nc;
-      render(); e.preventDefault();
+      render(true); e.preventDefault();
     } else if (key === 'ArrowLeft') {
       state.direction = 'A';
       let nc = state.activeCol - 1;
       while (nc >= 0 && isBlack(state.activeRow, nc)) nc--;
       if (nc >= 0) state.activeCol = nc;
-      render(); e.preventDefault();
+      render(true); e.preventDefault();
     } else if (key === 'ArrowDown') {
       state.direction = 'D';
       let nr = state.activeRow + 1;
       while (nr < ROWS && isBlack(nr, state.activeCol)) nr++;
       if (nr < ROWS) state.activeRow = nr;
-      render(); e.preventDefault();
+      render(true); e.preventDefault();
     } else if (key === 'ArrowUp') {
       state.direction = 'D';
       let nr = state.activeRow - 1;
       while (nr >= 0 && isBlack(nr, state.activeCol)) nr--;
       if (nr >= 0) state.activeRow = nr;
-      render(); e.preventDefault();
+      render(true); e.preventDefault();
     } else if (key === ' ') {
       state.direction = state.direction === 'A' ? 'D' : 'A';
-      render(); e.preventDefault();
+      render(true); e.preventDefault();
     } else if (key === 'Tab') {
       const list = state.direction === 'A' ? CLUES.across : CLUES.down;
       const active = findClue(state.activeRow, state.activeCol, state.direction);
@@ -904,7 +924,7 @@
       const next = list[(idx + (e.shiftKey ? -1 : 1) + list.length) % list.length];
       state.activeRow = next.row;
       state.activeCol = next.col;
-      render(); e.preventDefault();
+      render(true); e.preventDefault();
     }
   });
 
@@ -931,9 +951,13 @@
       }
     }
     state.solved = true;
+    // Sample the elapsed time once and use that single value for both the
+    // timer display and the completion message so they always match.
+    const finalTime = currentTimerText();
+    timerEl.textContent = finalTime;
     clearInterval(state.timerInterval);
     winBanner.classList.add('show');
-    winTime.textContent = formatElapsed();
+    winTime.textContent = finalTime;
     return true;
   }
 
