@@ -1,52 +1,59 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eight Days on the Ionian</title>
+<meta name="description" content="The official programme: Catania, 23-30 August 2026. Daily itinerary, food and bar directory, nightlife calendar and essential information for the group.">
+<meta name="author" content="Rupert Annison">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2317232B'/%3E%3Cpath d='M4 52 L26 16 L34 28 L40 22 L60 52 Z' fill='%231D5E7A'/%3E%3Cpath d='M20 25 L26 16 L32 25 Z' fill='%23A9761C'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="rupertannison.com">
+<meta property="og:title" content="Eight Days on the Ionian">
+<meta property="og:description" content="The official programme. Catania, 23-30 August 2026: Daily itinerary, food and bar directory, nightlife calendar and practical information.">
+<meta property="og:url" content="https://rupertannison.com/">
+<meta property="og:image" content="https://rupertannison.com/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eight Days on the Ionian">
+<meta name="twitter:description" content="The official programme. Catania, 23-30 August 2026.">
+<meta name="twitter:image" content="https://rupertannison.com/card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --ground:#F1F4EF; --surface:#FBFCF9; --surface-2:#E7ECE4;
+    --ground:#FFFFFF; --surface:#FFFFFF; --surface-2:#F4F7F2;
     --ink:#17232B; --ink-2:#4A5A60; --ink-3:#7C8A8C;
-    --line:#D3DBD1; --line-soft:#E4E9E1;
+    --line:#D8DFD6; --line-soft:#EAEEE7;
     --blue:#1D5E7A; --blue-soft:#DCE9EE;
     --ochre:#A9761C; --ochre-soft:#F2E7CE;
     --green:#5E7F3A; --green-soft:#E4EDD8;
     --lava:#A8412B; --lava-soft:#F6E2DC;
     --shadow:0 1px 2px rgba(23,35,43,.05), 0 4px 14px rgba(23,35,43,.05);
   }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --ground:#111A1E; --surface:#182226; --surface-2:#1F2B30;
-      --ink:#E9EEE7; --ink-2:#AFBCBB; --ink-3:#849494;
-      --line:#2C3A3F; --line-soft:#243136;
-      --blue:#6FBBD4; --blue-soft:#17313C;
-      --ochre:#DDAE5A; --ochre-soft:#33290F;
-      --green:#9FC072; --green-soft:#1F2C18;
-      --lava:#E28A70; --lava-soft:#3A1E17;
-      --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
-    }
-  }
-  :root[data-theme="dark"]{
-    --ground:#111A1E; --surface:#182226; --surface-2:#1F2B30;
-    --ink:#E9EEE7; --ink-2:#AFBCBB; --ink-3:#849494;
-    --line:#2C3A3F; --line-soft:#243136;
-    --blue:#6FBBD4; --blue-soft:#17313C;
-    --ochre:#DDAE5A; --ochre-soft:#33290F;
-    --green:#9FC072; --green-soft:#1F2C18;
-    --lava:#E28A70; --lava-soft:#3A1E17;
-    --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
-  }
-
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  [id]{scroll-margin-top:62px}
   body{margin:0;background:var(--ground);color:var(--ink);
     font-family:Karla,"Helvetica Neue",Arial,sans-serif;font-size:16.5px;line-height:1.58}
   .band{height:5px;background:repeating-linear-gradient(90deg,
     var(--blue) 0 14px, var(--ochre) 14px 22px, var(--green) 22px 30px, var(--lava) 30px 34px)}
   .wrap{max-width:940px;margin:0 auto;padding:0 22px 88px}
+
+  .topnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);display:flex;align-items:center;
+    padding:0 16px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+  .topnav .brand{font-family:"Bodoni Moda",Didot,Georgia,serif;font-weight:700;font-style:italic;
+    font-size:1.02rem;color:var(--ink);text-decoration:none;padding:11px 12px 11px 0;margin-right:4px}
+  .topnav a.nl{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink-2);text-decoration:none;padding:13px 10px}
+  .topnav a.nl:hover{color:var(--blue)}
+  .cd{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:.68rem;
+    letter-spacing:.05em;color:var(--ochre);padding:13px 0 13px 14px}
 
   h1,h2,h3{font-family:"Bodoni Moda",Didot,Georgia,serif;text-wrap:balance;font-weight:700}
   h1{font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.02;margin:0 0 .35em;letter-spacing:-.015em}
@@ -62,7 +69,7 @@
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.16em;
     text-transform:uppercase;color:var(--ink-3);margin:0 0 .5rem}
 
-  header.masthead{padding:52px 0 32px}
+  header.masthead{padding:48px 0 32px}
   .lede{font-size:1.06rem;color:var(--ink-2);max-width:64ch;margin:0}
 
   .fixed{display:grid;grid-template-columns:repeat(auto-fit,minmax(186px,1fr));gap:1px;
@@ -101,7 +108,11 @@
   .p-free{background:var(--blue-soft);color:var(--blue)}
   .p-big{background:var(--green-soft);color:var(--green)}
 
-  /* ---- day cards: tight timetable rows ---- */
+  .daychips{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 18px}
+  .daychips a{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.05em;
+    color:var(--blue);background:var(--blue-soft);border-radius:2px;padding:4px 9px;text-decoration:none}
+  .daychips a:hover{background:var(--blue);color:#fff}
+
   .day-card{background:var(--surface);border:1px solid var(--line);border-radius:4px;
     box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
   .day-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;
@@ -133,264 +144,334 @@
   @media (max-width:560px){
     .row{grid-template-columns:1fr;gap:1px}
     .row .t{padding-top:0}
-    header.masthead{padding:34px 0 24px}
+    header.masthead{padding:32px 0 24px}
   }
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media print{
+    body{font-size:10.5pt;line-height:1.42}
+    .band{height:3px}
+    .wrap{max-width:none;padding:0 0 12pt}
+    header.masthead{padding:0 0 14pt}
+    h1{font-size:34pt}
+    section{padding-top:18pt}
+    .sechead{margin-bottom:10pt}
+    .day-card,.box,.call,.scroll{break-inside:avoid;box-shadow:none}
+    .day-card{margin-bottom:9pt}
+    .row{padding:5pt 10pt}
+    .scroll{overflow:visible}
+    table{min-width:0}
+    a{color:inherit;text-decoration:none}
+    .topnav,.daychips{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <div class="band"></div>
+<nav class="topnav" id="top" aria-label="Sections">
+  <a class="brand" href="#top">Eight Days</a>
+  <a class="nl" href="#glance">The week</a>
+  <a class="nl" href="#days">Day by day</a>
+  <a class="nl" href="#food">Food</a>
+  <a class="nl" href="#nights">Nights</a>
+  <a class="nl" href="#info">Info</a>
+  <a class="nl" href="#admin">Admin</a>
+  <span class="cd" id="cd"></span>
+</nav>
 <div class="wrap">
 
 <header class="masthead">
-  <p class="eyebrow">Via Fragalà 7 · 23–30 August 2026 · four of us</p>
+  <p class="eyebrow">The official programme · Catania · 23–30 August 2026</p>
   <h1>Eight Days<br><em>on the Ionian</em></h1>
-  <p class="lede">Built around what's booked. Five car days, each aimed at one good swim and one good view; a full day in the Alcantara river rather than the tourist gorge; and the week's two best parties landing where they should — Monday on the sand, Friday in Villa Bellini.</p>
+  <p class="lede">The full plan for the week: a daily itinerary, food and bar recommendations, the nightlife calendar, and the practical information for getting around. Confirmed bookings are below; everything else is linked from the navigation above.</p>
 
   <div class="fixed">
-    <div><span class="k">Sun 23</span><span class="v">Land <span class="mono">12:30</span>, transfer to Via Fragalà</span></div>
-    <div><span class="k">Mon 24</span><span class="v">Etna sunset tour, <span class="mono">14:30</span>, 7 hrs, pickup at the door</span></div>
-    <div><span class="k">Tue 25 – Sat 29</span><span class="v">Car: airport <span class="mono">09:00</span> Tue → <span class="mono">19:00</span> Sat</span></div>
+    <div><span class="k">Sun 23</span><span class="v">Land <span class="mono">12:30</span> · transfer to Via Fragalà 7</span></div>
+    <div><span class="k">Mon 24</span><span class="v">Etna sunset tour · <span class="mono">14:30</span> · 7 hrs · pickup at the door</span></div>
+    <div><span class="k">Tue 25 – Sat 29</span><span class="v">Hire car · airport <span class="mono">09:00</span> Tue → <span class="mono">19:00</span> Sat</span></div>
     <div><span class="k">Sun 30</span><span class="v">Fly home around midday</span></div>
   </div>
 </header>
 
-<section>
-  <div class="sechead"><h2>Base camp</h2><span class="n">Via Fragalà 7</span></div>
-  <div class="cols">
-    <div class="box">
-      <h3>You're 76 metres from Piazza Università</h3>
-      <p style="font-size:.93rem">Which is about as central as Catania gets — everything below is on foot, no taxi needed until you go to a beach club.</p>
-      <dl class="kv">
-        <dt>2 min</dt><dd>Via Etnea</dd>
-        <dt>4 min</dt><dd>Piazza Duomo, and <strong>Da Aldo</strong> on Via Sangiuliano, basically next door</dd>
-        <dt>5 min</dt><dd>La Pescheria, the fish market</dd>
-        <dt>6 min</dt><dd>Piazza Teatro Massimo and Piazza Bellini — your default night</dd>
-        <dt>8 min</dt><dd>Via Gemmellaro / Landolina aperitivo strip; Piazza Currò and Castello Ursino</dd>
-        <dt>12 min</dt><dd>Villa Bellini, for Friday's gig. Also Catania Centrale, for the Alibus and bus 534</dd>
-        <dt>30 min</dt><dd>San Giovanni Li Cuti on foot — or a <span class="price">€10</span> taxi</dd>
-      </dl>
-    </div>
-    <div class="box">
-      <h3>The one driving rule</h3>
-      <p style="font-size:.93rem">Your Loggetta space is outside the restricted zone, so the fines aren't a worry — as long as you never set the satnav to the flat. <strong>Always navigate to Via della Loggetta, then walk.</strong> ZTL Bellini is camera-enforced 24 hours a day, 365 days a year, with no evening or weekend window, and Via Fragalà sits right on the edge of it.</p>
-      <p style="font-size:.93rem;margin-bottom:0">Tuesday morning: leave at <span class="mono">08:00</span>, walk 12 minutes to Centrale, Alibus at <span class="mono">08:20</span> (<span class="price">€4</span>, every 20 min), desk by <span class="mono">09:00</span>. Saturday's <span class="mono">19:00</span> drop is the hard deadline the last day is built backwards from.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="sechead"><h2>Before anything else</h2><span class="n">four calls</span></div>
-
-  <div class="call good">
-    <span class="lab">Book today — it's the best night of your week</span>
-    <p><strong>ANNA at Villa Bellini, Friday 28th, 21:00, from <span class="price">€45</span>.</strong> Anna Pepe, twelve minutes up Via Etnea from your door. The only headline act that week aimed at your age group — the rest of the Sotto il Vulcano bill is Fiorella Mannoia and Massimo Ranieri. Friday's day plan is built to get you back from Syracuse in time.</p>
-  </div>
-
-  <div class="call warn">
-    <span class="lab">Etna is still erupting — your tour is the right booking anyway</span>
-    <p>The Voragine eruption began 6 August and shut the airport for five days; it reopened on the 15th. INGV's 18 August bulletin still reports Strombolian activity, ash to ~6,000 m and lava reaching down to ~1,330 m in the Valle del Bove, with tremor falling. Mayors have imposed a 200 m standoff from lava fronts, ten people per guide, and automatic closure of the summit zones if the alert rises.</p>
-      <p>Your <span class="mono">14:30</span> tour works around 2,000 m — the part still open, and with lava flowing, the best show on the mountain. Message the operator on Sunday to confirm, and check your outbound flight the night before you fly.</p>
-  </div>
-
-  <div class="call">
-    <span class="lab">Three calls that hold the plan together</span>
-    <dl class="kv">
-      <dt>body rafting</dt><dd><strong>Thursday <span class="mono">10:00</span> slot, Motta Camastra.</strong> Book it — <span class="price">€45</span> for two hours with wetsuit, helmet, buoyancy aid, river shoes, showers and parking. Sicily Adventure and Body Rafting Alcantara both run 10:00 starts from Agriturismo Valle Alcantara. Ask for <em>body rafting</em>, not river trekking, which is the tamer dry half.</dd>
-      <dt>0931 67450</dt><dd><strong>Cavagrande reserve,</strong> the afternoon before Wednesday. It shuts day-by-day on red fire-risk alerts — it was closed on 22 July for exactly that. Entry <span class="price">€2</span>, <strong>card only at the gate.</strong></dd>
-      <dt>347 3723901</dt><dd><strong>Banacher,</strong> Aci Castello, 12:30–21:30. Saturday is reservation-only and their late-August calendar isn't published. Le Capannine on <span class="mono">095 7357235</span> is the fallback.</dd>
-    </dl>
-  </div>
-</section>
-
-<section>
-  <div class="sechead"><h2>The week at a glance</h2><span class="n">drive times from the flat</span></div>
+<section id="glance">
+  <div class="sechead"><h2>The week at a glance</h2><span class="n">click a day for detail</span></div>
   <div class="scroll">
     <table>
-      <thead><tr><th>Day</th><th>Headline</th><th>Wheel time</th><th>Night</th></tr></thead>
+      <thead><tr><th>Day</th><th>Programme</th><th>Transport</th><th>Evening</th></tr></thead>
       <tbody>
-        <tr><td class="day">Sun 23</td><td class="hl">Land, snorkel the Cyclops Riviera <span class="pill p-free">bus</span></td><td class="num">—</td><td>Easy. Teatro Massimo</td></tr>
-        <tr><td class="day">Mon 24</td><td class="hl">Fish market, then <strong>Etna at sunset</strong> <span class="pill p-free">no car</span></td><td class="num">—</td><td class="hl">Afrobar on the sand, 23:00 <span class="pill p-big">party</span></td></tr>
-        <tr><td class="day">Tue 25</td><td class="hl">Collect car · Taormina &amp; Isola Bella <span class="pill p-car">car</span></td><td class="num">45 min each way</td><td>Castelmola sunset, dinner up there</td></tr>
-        <tr><td class="day">Wed 26</td><td class="hl">Cavagrande canyon pools + Fontane Bianche <span class="pill p-car">car</span></td><td class="num">1h15 · dawn start</td><td>Deliberately quiet. Vermut</td></tr>
-        <tr><td class="day">Thu 27</td><td class="hl">Alcantara: body rafting + the Gurne + Castiglione <span class="pill p-car">car</span></td><td class="num">1h10 out</td><td>Etna wine, then home</td></tr>
-        <tr><td class="day">Fri 28</td><td class="hl">Syracuse &amp; Ortigia, sea caves by boat <span class="pill p-car">car</span></td><td class="num">1h each way</td><td class="hl">ANNA at Villa Bellini, then Afrobar <span class="pill p-big">party</span></td></tr>
-        <tr><td class="day">Sat 29</td><td class="hl">Calamosche · Marzamemi · Noto, drop car <span class="pill p-car">car</span></td><td class="num">1h45 out</td><td class="hl">Le Capannine or Banacher <span class="pill p-big">party</span></td></tr>
-        <tr><td class="day">Sun 30</td><td class="hl">Granita and out <span class="pill p-free">no car</span></td><td class="num">—</td><td>—</td></tr>
+        <tr><td class="day">Sun 23</td><td class="hl"><a href="#d-sun">Arrival · snorkelling the Cyclops Riviera</a> <span class="pill p-free">bus</span></td><td class="num">bus 534</td><td>Warm-up, Piazza Teatro Massimo</td></tr>
+        <tr><td class="day">Mon 24</td><td class="hl"><a href="#d-mon">Fish market · Etna at sunset</a> <span class="pill p-free">tour</span></td><td class="num">pickup 14:30</td><td class="hl">Afrobar beach party <span class="pill p-big">party</span></td></tr>
+        <tr><td class="day">Tue 25</td><td class="hl"><a href="#d-tue">Taormina · Isola Bella · Castelmola</a> <span class="pill p-car">car</span></td><td class="num">45 min</td><td>Sunset terrace, dinner up high</td></tr>
+        <tr><td class="day">Wed 26</td><td class="hl"><a href="#d-wed">Cavagrande canyon pools · Fontane Bianche</a> <span class="pill p-car">car</span></td><td class="num">1h15 · dawn</td><td>Recovery aperitivo</td></tr>
+        <tr><td class="day">Thu 27</td><td class="hl"><a href="#d-thu">Alcantara river day · Etna wine</a> <span class="pill p-car">car</span></td><td class="num">1h10</td><td>Wine tasting, then home</td></tr>
+        <tr><td class="day">Fri 28</td><td class="hl"><a href="#d-fri">Syracuse &amp; Ortigia · sea caves</a> <span class="pill p-car">car</span></td><td class="num">1h</td><td class="hl">ANNA live + Afrobar <span class="pill p-big">party</span></td></tr>
+        <tr><td class="day">Sat 29</td><td class="hl"><a href="#d-sat">Calamosche · Marzamemi · Noto</a> <span class="pill p-car">car</span></td><td class="num">1h45 · dawn-ish</td><td class="hl">Le Capannine / Banacher <span class="pill p-big">party</span></td></tr>
+        <tr><td class="day">Sun 30</td><td class="hl"><a href="#d-sun30">Granita and departure</a> <span class="pill p-free">bus</span></td><td class="num">Alibus</td><td>—</td></tr>
       </tbody>
     </table>
   </div>
-  <p style="margin-top:12px;color:var(--ink-2);font-size:.9rem">Three bits of sequencing logic. Cyclops snorkelling moves to Sunday because it's the one thing you want that needs a bus, not a car — which frees a whole car day for the Alcantara. Wednesday's canyon needs a <span class="mono">06:00</span> start, so it follows the week's one quiet night. And Friday and Saturday both drive home <em>past</em> the airport, since Fontanarossa sits south of the city — so Saturday's <span class="mono">19:00</span> drop happens en route, not as an errand.</p>
 </section>
 
-<section>
-  <div class="sechead"><h2>Day by day</h2><span class="n">eight days</span></div>
+<section id="days">
+  <div class="sechead"><h2>Day by day</h2><span class="n">the daily programme</span></div>
+  <div class="daychips"><a href="#d-sun">Sun · land</a><a href="#d-mon">Mon · Etna</a><a href="#d-tue">Tue · Taormina</a><a href="#d-wed">Wed · canyon</a><a href="#d-thu">Thu · river</a><a href="#d-fri">Fri · Ortigia</a><a href="#d-sat">Sat · beach</a><a href="#d-sun30">Sun · home</a></div>
 
-  <article class="day-card">
-    <div class="day-top"><span class="stamp">Sun 23</span><h3>Land, then straight into the clearest water on the coast</h3></div>
-    <div class="row"><span class="t">13:30</span><p>Transfer in, bags down. Buy four cheap snorkel masks on Via Etnea on the way out — you'll use them all week.</p></div>
-    <div class="row"><span class="t">14:45</span><p>Walk to Centrale and take <strong>bus 534</strong> to <strong>Aci Trezza</strong> — 30 minutes, <span class="price">€1.40</span>. Lava rock, the Cyclops stacks a hundred metres offshore, a marine protected area, and visibility that regularly runs past ten metres.<span class="aside">Snorkel free off the rocks along Lungomare dei Ciclopi and beside Lido dei Ciclopi. No boat needed — you can see the drop-offs from the surface.</span></p></div>
-    <div class="row"><span class="t">18:00</span><p><strong>Aci Castello</strong> next door: a Norman castle built straight onto a black lava crag, and the cheapest good view of the week. Aperitivo after at <strong>Caffè del Porto</strong> on the Trezza promenade.</p></div>
-    <div class="row"><span class="t dusk">21:00</span><p>Bus back (last one <span class="mono">22:40</span>) or a taxi, then dinner. <strong>Antica Trattoria La Paglia</strong> by the fish market runs to midnight; <strong>Trattoria Achille</strong> on Via Plebiscito does horse-meat panini for <span class="price">€4</span>.</p></div>
-    <div class="row"><span class="t dusk">22:30</span><p><strong>Piazza Teatro Massimo and Piazza Bellini,</strong> six minutes from the door. Nothing in Sicily fills before half ten. Keep tonight moderate — Monday is long.</p></div>
+  <article class="day-card" id="d-sun">
+    <div class="day-top"><span class="stamp">Sun 23</span><h3>Arrival day — straight into the clearest water on the coast</h3></div>
+    <div class="row"><span class="t">13:30</span><p>Check in at Via Fragalà, bags down. Pick up four cheap snorkel masks on Via Etnea on the way out — they earn their keep all week.</p></div>
+    <div class="row"><span class="t">14:45</span><p>Walk to Catania Centrale and take <strong>bus 534</strong> to <strong>Aci Trezza</strong> — 30 minutes, <span class="price">€1.40</span>. Lava rock, the Cyclops stacks a hundred metres offshore, a marine protected area, and visibility that regularly runs past ten metres.<span class="aside">Snorkel free off the rocks along Lungomare dei Ciclopi and beside Lido dei Ciclopi. No boat needed — the drop-offs are visible from the surface.</span></p></div>
+    <div class="row"><span class="t">18:00</span><p><strong>Aci Castello</strong> next door: a Norman castle built straight onto a black lava crag, and the cheapest good view of the week. Aperitivo at <strong>Caffè del Porto</strong> on the Trezza promenade.</p></div>
+    <div class="row"><span class="t dusk">21:00</span><p>Bus back (last one <span class="mono">22:40</span>) or a taxi. Dinner: <strong>Antica Trattoria La Paglia</strong> by the fish market runs to midnight; <strong>Trattoria Achille</strong> on Via Plebiscito does horse-meat panini for <span class="price">€4</span>.</p></div>
+    <div class="row"><span class="t dusk">22:30</span><p><strong>Piazza Teatro Massimo and Piazza Bellini,</strong> six minutes from the door. Nothing in Sicily fills before half ten. Tonight is a warm-up — Monday is a long one.</p></div>
   </article>
 
-  <article class="day-card">
+  <article class="day-card" id="d-mon">
     <div class="day-top"><span class="stamp">Mon 24</span><h3>Fish market, then the volcano at golden hour</h3></div>
     <div class="row"><span class="t">08:30</span><p><strong>La Pescheria,</strong> five minutes away. Swordfish heads, men shouting, blood on the cobbles — go before nine while it's still working rather than performing. Granita and brioche after at <strong>Comis Ice Cafè</strong>, Piazza Bellini, <span class="price">€3.80</span>.</p></div>
-    <div class="row"><span class="t">11:00</span><p>Out of the sun and pack for altitude: long trousers, fleece and a windproof each, plus a head torch for the lava cave. It'll be <span class="mono">32°C</span> in the street and <span class="mono">11–15°C</span> on the mountain at dusk.</p></div>
-    <div class="row"><span class="t">14:30</span><p><strong>Etna sunset tour</strong> — pickup at the door, seven hours. Craters around 2,000 m, a lava tube, sunset off the flank, back about <span class="mono">21:30</span>.</p></div>
-    <div class="row"><span class="t dusk">23:00</span><p><strong>Afrobar, La Playa — "Tutti i Lunedì".</strong> Their weekly beach party, guestlist entry, free grill with a drink until midnight. DM them on Instagram in the afternoon to get on the list.<span class="aside">Taxi <span class="price">€15–22</span> each way for the four of you. Bus D stops at midnight and there is no night bus back.</span></p></div>
+    <div class="row"><span class="t">11:00</span><p>Out of the sun; pack for altitude. Long trousers, fleece and a windproof each, head torch for the lava cave. It will be <span class="mono">32°C</span> in the street and <span class="mono">11–15°C</span> on the mountain at dusk.</p></div>
+    <div class="row"><span class="t">14:30</span><p><strong>Etna sunset tour</strong> — pickup at the door, seven hours. Craters around 2,000 m, a lava tube, sunset off the flank, back about <span class="mono">21:30</span>. The volcano is currently active — see the volcano notice under <a href="#info">Info</a>.</p></div>
+    <div class="row"><span class="t dusk">23:00</span><p><strong>Afrobar, La Playa — "Tutti i Lunedì".</strong> The Monday beach party on the sand, guestlist entry, free grill with a drink until midnight. DM their Instagram in the afternoon for the list.<span class="aside">Taxi <span class="price">€15–22</span> each way for four. Bus D stops at midnight and there is no night bus — budget the taxi both ways.</span></p></div>
   </article>
 
-  <article class="day-card">
-    <div class="day-top"><span class="stamp">Tue 25</span><h3>Car keys, then Taormina and the best snorkelling in the north</h3></div>
-    <div class="row"><span class="t">09:00</span><p>Collect the car. <strong>Photograph every panel, wheel and the windscreen before you leave the bay</strong> — Catania's cheaper desks have form for damage charges and timestamps are the only defence. Expect a hold of <span class="price">€1,200–2,000</span> on the lead driver's credit card if you've bought cover elsewhere.</p></div>
-    <div class="row"><span class="t">10:15</span><p><strong>Mazzarò and Isola Bella,</strong> 45 minutes up the A18 (<span class="price">€1.80</span> toll). Park at <strong>Lumbi</strong> above Taormina and take its free shuttle in, then the funivia down to the water — <span class="price">€6</span> single, <span class="price">€10</span> return. The shuttle runs until <span class="mono">00:50</span>, so there's no rush at the end.</p></div>
-    <div class="row"><span class="t">10:45</span><p><strong>Swim and snorkel at Isola Bella.</strong> Pebbles, no sand, and the clearest water on this coast — the rocks either side of the spit are the good bit. The beach is free; the islet nature reserve is <span class="price">€6</span> if you want to walk across.</p></div>
-    <div class="row"><span class="t">15:00</span><p><strong>Taormina.</strong> Teatro Antico is <span class="price">€14</span>, last entry 19:00 — a Greek theatre with Etna framed in the broken stage wall, worth it once. Corso Umberto afterwards.<span class="aside">The <span class="price">€7</span> concession is EU citizens 18–25 only, so post-Brexit assume full price.</span></p></div>
-    <div class="row"><span class="t">19:00</span><p><strong>Castelmola</strong> for sunset — five kilometres of hairpins above town, or forty minutes on the Sentiero dei Saraceni if you've got legs. <strong>Bar Turrisi</strong> is decorated floor to ceiling with phalluses and serves almond wine; the view from Piazza Sant'Antonio is the real reason to go. Dinner up there, then 45 minutes home.</p></div>
+  <article class="day-card" id="d-tue">
+    <div class="day-top"><span class="stamp">Tue 25</span><h3>Car day one — Taormina, Isola Bella, Castelmola at sunset</h3></div>
+    <div class="row"><span class="t">09:00</span><p>Collect the car at the airport. <strong>Photograph every panel, wheel and the windscreen before leaving the bay</strong> — timestamps are the only defence in a damage dispute.</p></div>
+    <div class="row"><span class="t">10:15</span><p>45 minutes up the A18 (<span class="price">€1.80</span> toll). Park at <strong>Lumbi</strong> above Taormina, free shuttle into town, then the funivia down to the water — <span class="price">€6</span> single, <span class="price">€10</span> return. The shuttle runs until <span class="mono">00:50</span>, so no curfew.</p></div>
+    <div class="row"><span class="t">10:45</span><p><strong>Swim and snorkel at Isola Bella.</strong> Pebbles, no sand, the clearest water on this coast — the rocks either side of the spit are the good bit. The beach is free; the islet nature reserve is <span class="price">€6</span> to walk across.</p></div>
+    <div class="row"><span class="t">15:00</span><p><strong>Taormina.</strong> Teatro Antico, <span class="price">€14</span>, last entry 19:00 — a Greek theatre with Etna framed in the broken stage wall. Then Corso Umberto for the passeggiata.</p></div>
+    <div class="row"><span class="t dusk">19:00</span><p><strong>Castelmola</strong> for sunset — five kilometres of hairpins above town, or forty minutes on the Sentiero dei Saraceni on foot. <strong>Bar Turrisi</strong> is decorated floor to ceiling with phalluses and serves almond wine; the viewpoint at Piazza Sant'Antonio looks over Taormina, the coast and Etna. Dinner up there, then 45 minutes home.</p></div>
   </article>
 
-  <article class="day-card">
+  <article class="day-card" id="d-wed">
     <div class="day-top"><span class="stamp">Wed 26</span><h3>Canyon pools at dawn, white sand by lunch</h3></div>
-    <div class="row"><span class="t">06:00</span><p>Out the door — sunrise is <span class="mono">06:24</span> and this is the one early start that genuinely pays. An hour and a quarter to the <strong>Belvedere di Avola Antica</strong>, up a hairpin road above Avola.</p></div>
-    <div class="row"><span class="t">07:30</span><p><strong>Cavagrande del Cassibile.</strong> <span class="price">€2</span> at the gate, card only, then a 300 m descent on steep rock steps — forty minutes down, an hour and a quarter back up. At the bottom, a chain of deep green freshwater pools in a limestone canyon, and at eight in the morning quite possibly no one else.<span class="aside">Closed shoes are mandatory and staff enforce it. Be climbing out by <span class="mono">10:30</span> — the canyon floor is airless, the ascent in <span class="mono">34°C</span> has hospitalised people, and a hiker died here in June. Two litres of water each.</span></p></div>
-    <div class="row"><span class="t">12:30</span><p>Twenty minutes to the coast for salt water and a cold beer. <strong>Fontane Bianche</strong> for white sand, beach bars and a rocky snorkelling corner. <strong>Gelsomineto</strong> is the better beach and much quieter — sand with pine shade — but has no facilities at all.</p></div>
-    <div class="row"><span class="t dusk">20:00</span><p>Dinner at <strong>Nuova Trattoria del Forestiero</strong> on Via Coppola, <span class="price">€10–20</span> (book two days out), then a slow one at <strong>Vermut</strong>, Via Gemmellaro 39 — vermouth and natural wine, <span class="price">€5–7</span> a glass. Nothing is on in town tonight, which is what your legs want.</p></div>
+    <div class="row"><span class="t">06:00</span><p>Out the door. Sunrise is <span class="mono">06:24</span>; the canyon must be done in the cool hours. An hour and a quarter to the <strong>Belvedere di Avola Antica</strong>.</p></div>
+    <div class="row"><span class="t">07:30</span><p><strong>Cavagrande del Cassibile.</strong> <span class="price">€2</span> at the gate, <strong>card only</strong>, then a 300 m descent on rock steps — forty minutes down, an hour and a quarter back up. At the bottom: a chain of deep green freshwater pools in a limestone canyon, and at eight in the morning, quite possibly nobody else in them.<span class="aside">Closed shoes are mandatory and staff check. Be climbing out by <span class="mono">10:30</span> — the canyon is airless by midday. Two litres of water each.</span></p></div>
+    <div class="row"><span class="t">12:30</span><p>Twenty minutes to the coast for salt water and a cold beer. <strong>Fontane Bianche</strong>: white sand, beach bars, a rocky snorkelling corner. Quieter alternative: <strong>Gelsomineto</strong>, sand under pines, no facilities at all.</p></div>
+    <div class="row"><span class="t dusk">20:00</span><p>Recovery evening. Dinner at <strong>Nuova Trattoria del Forestiero</strong>, Via Coppola, <span class="price">€10–20</span> (book ahead), then <strong>Vermut</strong> on Via Gemmellaro — vermouth and natural wine, <span class="price">€5–7</span> a glass.</p></div>
   </article>
 
-  <article class="day-card">
-    <div class="day-top"><span class="stamp">Thu 27</span><h3>A full day in the Alcantara — the river, not the turnstile</h3></div>
-    <div class="row"><span class="t">08:15</span><p>Leave. An hour and ten to <strong>Motta Camastra</strong> via the A18 and the SS185 — the last fifteen kilometres are twisty, so don't cut it fine.</p></div>
-    <div class="row"><span class="t">10:00</span><p><strong>Body rafting,</strong> put-in at Agriturismo Valle Alcantara, 750 m past the gorge entrance. Two hours, about ninety minutes in the water: you scramble and swim <em>upstream</em> through the basalt, then ride it back down, with around five jumps on the way. Spring-fed, so <span class="mono">10–12°C</span> all year — after four days of Sicilian August that's the entire point.<span class="aside">Hydrospeed only runs November to May, so it's not an option this week.</span></p></div>
+  <article class="day-card" id="d-thu">
+    <div class="day-top"><span class="stamp">Thu 27</span><h3>The Alcantara river day — rafting, plunge pools, Etna wine</h3></div>
+    <div class="row"><span class="t">08:15</span><p>Leave. An hour and ten to <strong>Motta Camastra</strong> via the A18 and SS185 — the last fifteen kilometres are twisty — allow the full time.</p></div>
+    <div class="row"><span class="t">10:00</span><p><strong>Body rafting,</strong> put-in at Agriturismo Valle Alcantara. Two hours, about ninety minutes in the water: scramble and swim <em>upstream</em> through the basalt, then ride the current back down, with around five jumps on the way. The river is spring-fed and <span class="mono">10–12°C</span> all year; the 5&nbsp;mm wetsuit provided is needed.</p></div>
     <div class="row"><span class="t">12:45</span><p>Ten minutes to <strong>Francavilla di Sicilia</strong> for lunch. Park at the Museo Archeologico or the rough <em>spiazzo</em> on Via Orsino Orsini.</p></div>
-    <div class="row"><span class="t">14:00</span><p><strong>Le Gurne dell'Alcantara.</strong> Sixteen lava plunge pools, some fifty metres across and ten deep, gouged into the basalt upstream of the tourist gorge. <strong>Free, no ticket, no guide, and almost entirely locals.</strong> The signed path runs about 1.5 km each way with nine numbered viewpoints, crossing an Enel footbridge past the Mulino Ciappa. <strong>Gurna della Passarella</strong> is the one — double waterfall into a big pool; the Laghetto di Venere also swims well.<span class="aside">Because they're sun-exposed these are far warmer than the gorge. Wet basalt is slippery as soap, so river shoes, and don't swim directly under the falls.</span></p></div>
-    <div class="row"><span class="t">15:30</span><p><strong>The active version, since you asked for it:</strong> walk the trail out, then come back down <em>in the riverbed</em> — scrambling, wading and swimming the pools rather than the path. That turns a soft 3 km stroll into a proper three-hour afternoon, and it's what the walk is actually for.</p></div>
-    <div class="row"><span class="t">17:45</span><p>Fifteen minutes to <strong>Castiglione di Sicilia</strong>, one of the <em>borghi più belli d'Italia</em> at 621 m, with the Castello di Lauria and the whole Alcantara valley below and Etna behind. Park at the bottom and walk up. The <strong>Cuba di Santa Domenica</strong> on the way in is a tenth-century Islamic-Norman chapel, five minutes and free.</p></div>
-    <div class="row"><span class="t dusk">18:45</span><p><strong>Etna DOC wine, ten minutes on</strong> at Passopisciaro or Solicchiata — <strong>Cottanera</strong> does tastings from <span class="price">€40</span>, or Graci, Pietradolce and Girolamo Russo are all within a few kilometres. <strong>Book ahead, these aren't walk-in,</strong> and settle the driver first. Then an hour and a quarter home down the north flank.<span class="aside">Skip the famous narrow gorge, or do it on the way past for <span class="price">€2</span> via the municipal Larderia staircase — 200-odd steps to the pebble beach and a free wade. The private park's lift is <span class="price">€10–13</span> and the <span class="price">€30</span> ticket is a guided package with boots you won't need. Both entrances reach the same water; the public beach is mobbed in August, and you'll have already done the river properly.</span></p></div>
+    <div class="row"><span class="t">14:00</span><p><strong>Le Gurne dell'Alcantara.</strong> Sixteen lava plunge pools — some fifty metres across and ten deep — upstream of the tourist gorge. <strong>Free, no ticket, no guide, almost entirely locals.</strong> The signed path runs 1.5 km each way past the Mulino Ciappa; <strong>Gurna della Passarella</strong> is the one, a double waterfall into a big pool.<span class="aside">Sun-exposed, so far warmer than the gorge. Wet basalt is slippery as soap: river shoes on, and no swimming directly under the falls.</span></p></div>
+    <div class="row"><span class="t">15:30</span><p><strong>The active route back:</strong> return down the riverbed itself — scrambling, wading and swimming the pools instead of the path. Turns a gentle stroll into a proper three-hour afternoon.</p></div>
+    <div class="row"><span class="t">17:45</span><p>Fifteen minutes to <strong>Castiglione di Sicilia</strong> — officially one of Italy's most beautiful villages, castle on top, the whole Alcantara valley below and Etna behind. The <strong>Cuba di Santa Domenica</strong> on the way in is a tenth-century chapel: five minutes, free.</p></div>
+    <div class="row"><span class="t dusk">18:45</span><p><strong>Etna DOC tasting</strong> ten minutes on at Passopisciaro — <strong>Cottanera</strong> from <span class="price">€40</span>, or Graci, Pietradolce and Girolamo Russo nearby. Booked ahead; driver nominated at breakfast. Then an hour and a quarter home down the north flank.<span class="aside">The famous narrow gorge is skippable, or <span class="price">€2</span> via the municipal Larderia staircase on the way past — 200 steps to the pebble beach for a quick wade. The private park package is the same water with a lift.</span></p></div>
   </article>
 
-  <article class="day-card">
+  <article class="day-card" id="d-fri">
     <div class="day-top"><span class="stamp">Fri 28</span><h3>Ortigia by day, Villa Bellini by night</h3></div>
-    <div class="row"><span class="t">09:00</span><p>An hour south to <strong>Syracuse</strong>. Park at <strong>Talete</strong> on the edge of Ortigia — <span class="price">€1.50</span>/hour, <span class="price">€15</span> a day. Don't drive onto the island: the ZTL runs 11:00–15:30 and 17:00–02:00, which is effectively all day.</p></div>
-    <div class="row"><span class="t">10:30</span><p><strong>Ortigia</strong> — the one genuinely beautiful city of the trip. A baroque cathedral built inside a Greek temple, the Fonte Aretusa and its papyrus, lanes narrow enough to stay cool. Then a <strong>sea-caves boat tour</strong> round the island: an hour for <span class="price">€25–30</span>, two with prosecco for <span class="price">€40–50</span>.</p></div>
-    <div class="row"><span class="t">13:30</span><p>Swim off the rocks at <strong>Cala Rossa</strong> or by <strong>Forte Vigliena</strong> — ladders straight into deep clear water, which is how Ortigia does beaches. Lunch in the market lanes off Via Trento.</p></div>
-    <div class="row"><span class="t">17:00</span><p>Leave by five, home by six, past the airport, no drama.</p></div>
-    <div class="row"><span class="t dusk">21:00</span><p><strong>ANNA at Villa Bellini,</strong> twelve minutes up Via Etnea. Then straight to <strong>Afrobar's "We Love 2000s"</strong> at <span class="mono">23:00</span>, <span class="price">€10</span> plus fee, on the sand at La Playa. This is the night — leave nothing in reserve, Saturday looks after itself.</p></div>
+    <div class="row"><span class="t">09:00</span><p>An hour south to <strong>Syracuse</strong>. Park at <strong>Talete</strong> on the edge of Ortigia — <span class="price">€1.50</span>/hour, <span class="price">€15</span>/day. Do not drive onto the island; the ZTL is effectively all-day.</p></div>
+    <div class="row"><span class="t">10:30</span><p><strong>Ortigia</strong> — the prettiest city of the week. A baroque cathedral built inside a Greek temple, the Fonte Aretusa, lanes narrow enough to stay cool. Then a <strong>sea-caves boat tour</strong> round the island: an hour for <span class="price">€25–30</span>, two with prosecco for <span class="price">€40–50</span>.</p></div>
+    <div class="row"><span class="t">13:30</span><p>Swim off the rocks at <strong>Cala Rossa</strong> or <strong>Forte Vigliena</strong> — ladders straight into deep clear water. Lunch in the market lanes off Via Trento.</p></div>
+    <div class="row"><span class="t">17:00</span><p>Leave by five, home by six.</p></div>
+    <div class="row"><span class="t dusk">21:00</span><p><strong>ANNA live at Villa Bellini,</strong> twelve minutes' walk up Via Etnea. Then <strong>Afrobar's "We Love 2000s"</strong> at <span class="mono">23:00</span>, <span class="price">€10</span> plus fee, on the sand. This is the biggest night of the week.</p></div>
   </article>
 
-  <article class="day-card">
+  <article class="day-card" id="d-sat">
     <div class="day-top"><span class="stamp">Sat 29</span><h3>Best beach, best village, best granita — keys back by seven</h3></div>
-    <div class="row"><span class="t">07:00</span><p>Painful, worth it. An hour forty-five to <strong>Vendicari</strong>; park at the Calamosche gate, <span class="price">€3.50</span> entry, twenty-minute walk in.</p></div>
-    <div class="row"><span class="t">09:00</span><p><strong>Calamosche.</strong> Two hundred metres of sand between two rock headlands, no bar, no sunbeds, no road — the best water in eastern Sicily and the reason to have a car at all. Full by half nine in August, hence the alarm. Carry all your own water and food.</p></div>
+    <div class="row"><span class="t">07:00</span><p>An hour forty-five to <strong>Vendicari</strong>; park at the Calamosche gate, <span class="price">€3.50</span> entry, twenty-minute walk in.</p></div>
+    <div class="row"><span class="t">09:00</span><p><strong>Calamosche.</strong> Two hundred metres of sand between two rock headlands — no bar, no sunbeds, no road, and the best water in eastern Sicily. Full by half nine in August, hence the alarm. Bring all water and food in.</p></div>
     <div class="row"><span class="t">13:00</span><p><strong>Marzamemi,</strong> half an hour on: an old tuna-fishery village where the whole square is tables and the whole menu is fish. Then the shallow turquoise sand at <strong>San Lorenzo</strong>, ten minutes away.</p></div>
-    <div class="row"><span class="t">15:45</span><p><strong>Noto</strong> on the way home, when the baroque goes the colour of honey. Granita at <strong>Caffè Sicilia</strong> on Corso Vittorio Emanuele — a genuine pilgrimage, not a tourist trap.<span class="aside">Hard rule: leave Noto by <span class="mono">17:30</span>. It's an hour to the airport and the car is due at <span class="mono">19:00</span>.</span></p></div>
-    <div class="row"><span class="t">18:45</span><p>Drop the car — the airport is on your way in. Then the flat <span class="price">€27</span> taxi or the <span class="price">€4</span> Alibus into the centre.</p></div>
-    <div class="row"><span class="t dusk">23:00</span><p>Last night, three ways. <strong>Le Capannine — "Saturday Night @Switch",</strong> three rooms of r'n'b, reggaeton, trap and latin on the beach, <span class="price">€5–7</span> before midnight. <strong>Banacher</strong> in Aci Castello for the smarter open-air version, reservation only, taxi <span class="price">€20–28</span>. Or <strong>Afrobar's 80s/90s night</strong> if Friday went well.</p></div>
+    <div class="row"><span class="t">15:45</span><p><strong>Noto</strong> on the way home, when the baroque goes the colour of honey. Granita at <strong>Caffè Sicilia</strong> on Corso Vittorio Emanuele — widely rated the best in Sicily.<span class="aside">Hard rule: wheels rolling out of Noto by <span class="mono">17:30</span>. It's an hour to the airport and the car is due at <span class="mono">19:00</span>.</span></p></div>
+    <div class="row"><span class="t">18:45</span><p>Drop the car — the airport is on the way in. Then the flat <span class="price">€27</span> taxi or the <span class="price">€4</span> Alibus into the centre.</p></div>
+    <div class="row"><span class="t dusk">23:00</span><p>Closing night, three options: <strong>Le Capannine — "Saturday Night @Switch"</strong>, three rooms on the beach, <span class="price">€5–7</span> before midnight; <strong>Banacher</strong> in Aci Castello, open-air under palms, reservation only, taxi <span class="price">€20–28</span>; or <strong>Afrobar's 80s/90s night</strong>.</p></div>
   </article>
 
-  <article class="day-card">
-    <div class="day-top"><span class="stamp">Sun 30</span><h3>Granita and out</h3></div>
-    <div class="row"><span class="t">09:30</span><p>Last almond granita and a final arancino from <strong>Savia</strong> on Via Etnea, <span class="price">€2.50–4</span>. Half an hour in the shade of Villa Bellini. The fish market is shut on Sundays.</p></div>
-    <div class="row"><span class="t">10:30</span><p>Alibus, <span class="price">€4</span>, twenty minutes — or the flat <span class="price">€27</span> taxi. Leave margin: Sunday runs a reduced timetable and the ash backlog may still be clearing.</p></div>
+  <article class="day-card" id="d-sun30">
+    <div class="day-top"><span class="stamp">Sun 30</span><h3>Granita and departure</h3></div>
+    <div class="row"><span class="t">09:30</span><p>Last almond granita, a final arancino from <strong>Savia</strong> on Via Etnea (<span class="price">€2.50–4</span>), half an hour in the shade of Villa Bellini. The fish market is shut Sundays.</p></div>
+    <div class="row"><span class="t">10:30</span><p>Alibus to the airport, <span class="price">€4</span>, twenty minutes — or the flat <span class="price">€27</span> taxi. Leave margin: Sunday runs a reduced timetable.</p></div>
   </article>
 </section>
 
-<section>
-  <div class="sechead"><h2>Nights, best first</h2><span class="n">what's actually on</span></div>
+<section id="food">
+  <div class="sechead"><h2>Food &amp; drink directory</h2><span class="n">nothing over €20</span></div>
+  <div class="cols">
+    <div class="box">
+      <h3>Sit-down, walkable from the flat</h3>
+      <ul>
+        <li><strong>Da Aldo</strong>, Via Sangiuliano 18 — <span class="price">€8–15</span>, lunch only, cash, four minutes away. Arrive at opening or don't bother.</li>
+        <li><strong>U Fucularu</strong>, near Piazza Università — pasta alla Norma <span class="price">€14</span>, Catania's signature dish on home turf.</li>
+        <li><strong>La Paglia</strong>, Via Pardo 23 — fish-market seafood, open to midnight daily. The late-night save.</li>
+        <li><strong>Nuova Trattoria del Forestiero</strong>, Via Coppola — <span class="price">€10–20</span>, book two days ahead.</li>
+        <li><strong>Trattoria Achille</strong>, Via Plebiscito 734 — the horse-meat grill strip locals actually use. Panino <span class="price">€4</span>.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Street food &amp; sugar</h3>
+      <ul>
+        <li><strong>Savia</strong>, Via Etnea 300 — arancini <span class="price">€2.50–4</span>, since 1897. Catania's arancini are cone-shaped.</li>
+        <li><strong>Scirocco Fish Lab</strong>, in the fish market — fried-fish cones <span class="price">€6–7</span>.</li>
+        <li><strong>Panetteria Pacini</strong> — arancini under <span class="price">€5</span>, the local's local.</li>
+        <li><strong>Comis Ice Cafè</strong>, Piazza Bellini — granita + brioche <span class="price">€3.80</span>. Tear the brioche and dip it — the local way to eat it.</li>
+        <li><strong>Caffè Sicilia</strong>, Noto — the granita all the others are measured against. Saturday's reward.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>On the road</h3>
+      <ul>
+        <li><strong>Anchovy Fish Bar</strong>, Aci Trezza — seafood sandwiches ~<span class="price">€13</span> on the harbour.</li>
+        <li><strong>Il Covo Marino</strong>, Aci Trezza — sit-down with dock views, ~<span class="price">€20</span>.</li>
+        <li><strong>Marzamemi</strong> — any table on the piazza; order whatever the boat brought in.</li>
+        <li><strong>Bar Turrisi</strong>, Castelmola — almond wine — the bar is known for its eccentric décor.</li>
+        <li><strong>Cottanera</strong>, Passopisciaro — Etna DOC tasting from <span class="price">€40</span>, booked ahead.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="nights">
+  <div class="sechead"><h2>Nightlife programme</h2><span class="n">best first</span></div>
   <div class="scroll">
     <table>
       <thead><tr><th>Night</th><th>Where</th><th>What</th><th>Door</th></tr></thead>
       <tbody>
         <tr><td class="day">Fri 28</td><td class="hl">Villa Bellini → Afrobar</td><td>ANNA live at 21:00, then "We Love 2000s" on the sand at 23:00</td><td class="num">€45 + €10</td></tr>
-        <tr><td class="day">Sat 29</td><td class="hl">Le Capannine <em>or</em> Banacher</td><td>"Saturday Night @Switch", three rooms · or Banacher's Saturday DJ night, reservation only</td><td class="num">€5–10 / ~€20</td></tr>
-        <tr><td class="day">Mon 24</td><td class="hl">Afrobar, La Playa</td><td>"Tutti i Lunedì" — weekly beach party, guestlist, free grill with a drink till midnight</td><td class="num">list</td></tr>
-        <tr><td class="day">Tue 25</td><td>Castelmola</td><td>Bar Turrisi and the terrace above Taormina. You're driving</td><td class="num">—</td></tr>
-        <tr><td class="day">Thu 27</td><td>Passopisciaro</td><td>Etna DOC tasting, booked. Nominate the driver at breakfast</td><td class="num">€40</td></tr>
+        <tr><td class="day">Sat 29</td><td class="hl">Le Capannine <em>or</em> Banacher</td><td>"Saturday Night @Switch", three rooms · or Banacher's open-air Saturday, reservation only</td><td class="num">€5–10 / ~€20</td></tr>
+        <tr><td class="day">Mon 24</td><td class="hl">Afrobar, La Playa</td><td>"Tutti i Lunedì" beach party — guestlist, free grill with a drink till midnight</td><td class="num">list</td></tr>
+        <tr><td class="day">Tue 25</td><td>Castelmola</td><td>Bar Turrisi and the terrace above Taormina — driving night, low volume</td><td class="num">—</td></tr>
+        <tr><td class="day">Thu 27</td><td>Passopisciaro</td><td>Etna DOC tasting — driver nominated at breakfast</td><td class="num">€40</td></tr>
         <tr><td class="day">Sun 23</td><td>Piazza Teatro Massimo</td><td>Street tables, students, cheap spritz, six minutes from the door</td><td class="num">free</td></tr>
-        <tr><td class="day">Wed 26</td><td>Via Gemmellaro / Landolina</td><td>Vermut and the aperitivo strip. Deliberately quiet</td><td class="num">free</td></tr>
+        <tr><td class="day">Wed 26</td><td>Via Gemmellaro / Landolina</td><td>Vermut and the aperitivo strip — scheduled recovery</td><td class="num">free</td></tr>
       </tbody>
     </table>
   </div>
-  <p style="margin-top:12px;color:var(--ink-2);font-size:.9rem">Afrobar, Capannine and Banacher advertise these as <em>weekly</em> residencies and the listings we found are archived — so the pattern is near-certain and the exact dates are not. Check Instagram the day before. <strong>Zo</strong> has nothing until 2 September, <strong>Mercati Generali</strong> lists no late-August date, and <strong>Ma</strong> and <strong>Nievski</strong> publish no August calendar at all, so they're probably partly on <em>ferie</em>.</p>
-
   <div class="cols" style="margin-top:18px">
     <div class="box">
-      <h3>Bars, all walkable</h3>
+      <h3>The bar shortlist</h3>
       <ul>
-        <li><strong>A Putìa dell'Ostello</strong>, Piazza Currò — cocktails, weekend DJ sets to dawn. Best all-rounder for a mixed group.</li>
+        <li><strong>A Putìa dell'Ostello</strong>, Piazza Currò — cocktails, weekend DJ sets to dawn. Best all-rounder.</li>
         <li><strong>Vermut</strong>, Via Gemmellaro 39 — vermouth and natural wine, <span class="price">€5–7</span>.</li>
-        <li><strong>First Lounge Bar</strong>, Piazza Goliarda Sapienza — regenerated San Berillo, the city's most interesting crowd.</li>
-        <li><strong>Ciclope</strong> for craft beer, <strong>Stratosferica</strong> for cocktails, both on the Bellini cluster.</li>
-        <li>Via del Plebiscito below Castello Ursino: street food into late drinking, peaks between one and three.</li>
+        <li><strong>First Lounge Bar</strong>, Piazza Goliarda Sapienza — regenerated San Berillo, the most interesting crowd in town.</li>
+        <li><strong>Ciclope</strong> (craft beer) and <strong>Stratosferica</strong> (cocktails), both by Piazza Bellini.</li>
+        <li>Via del Plebiscito below Castello Ursino — street food into late drinking, peaks 01:00–03:00.</li>
       </ul>
     </div>
     <div class="box">
-      <h3>Eating well under twenty euro</h3>
+      <h3>House rules for club nights</h3>
       <ul>
-        <li><strong>Da Aldo</strong>, Via Sangiuliano 18 — <span class="price">€8–15</span>, lunch only, cash, four minutes from your door. Arrive at opening or don't bother.</li>
-        <li><strong>Trattoria Achille</strong>, Via Plebiscito 734 — horse-meat panini <span class="price">€4</span>. The strip locals use.</li>
-        <li><strong>Scirocco Sicilian Fish Lab</strong>, in the fish market — fried-fish cones <span class="price">€6–7</span>.</li>
-        <li><strong>U Fucularu</strong>, near Piazza Università — pasta alla Norma <span class="price">€14</span>.</li>
-        <li><strong>La Paglia</strong>, Via Pardo 23 — pescheria seafood, open to midnight daily.</li>
-        <li><strong>Panetteria Pacini</strong> arancini under <span class="price">€5</span>; <strong>Comis Ice Cafè</strong> granita and brioche <span class="price">€3.80</span>.</li>
+        <li>Timings are Sicilian: aperitivo 19:00–22:00, bars fill 22:30, clubs peak 01:00–04:00. Arriving from 23:00 is normal.</li>
+        <li>Afrobar, Capannine and Banacher run these as weekly residencies — confirm on Instagram the day before, and DM for guestlist.</li>
+        <li>Banacher requires a reservation and has a smarter dress code than the beach clubs.</li>
+        <li>Spritz <span class="price">€5–8</span>, cocktails <span class="price">€5–12</span>, beach-club entry <span class="price">€10–20</span> usually with a drink.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="sechead"><h2>Numbers worth knowing</h2><span class="n">practicals</span></div>
+<section id="info">
+  <div class="sechead"><h2>Essential information</h2><span class="n">practical</span></div>
+
+  <div class="call warn">
+    <span class="lab">Volcano notice</span>
+    <p>Etna has been erupting since 6 August and is still active — which is why the Monday tour may be spectacular, and also why plans can change at short notice. Excursions above 2,500 m require a licensed guide; the tour handles all of that. Check flight status the evening before both flights, and follow the operator's guidance if the tour is rescheduled.</p>
+  </div>
+
   <div class="cols">
     <div class="box">
+      <h3>Base camp — Via Fragalà 7</h3>
+      <p style="font-size:.92rem;margin-bottom:.5rem">76 metres from Piazza Università. Everything is on foot:</p>
+      <dl class="kv">
+        <dt>2 min</dt><dd>Via Etnea</dd>
+        <dt>4 min</dt><dd>Piazza Duomo · Da Aldo</dd>
+        <dt>5 min</dt><dd>La Pescheria fish market</dd>
+        <dt>6 min</dt><dd>Piazza Teatro Massimo</dd>
+        <dt>8 min</dt><dd>Gemmellaro/Landolina bars · Piazza Currò</dd>
+        <dt>12 min</dt><dd>Villa Bellini · Catania Centrale</dd>
+        <dt>30 min</dt><dd>San Giovanni Li Cuti swim spot (or a <span class="price">€10</span> taxi)</dd>
+      </dl>
+    </div>
+    <div class="box">
+      <h3>The car</h3>
+      <ul>
+        <li>Parking space: <strong>Via della Loggetta 11</strong>. Navigate to <em>the parking</em>, never the flat — the flat sits on the edge of a camera-enforced restricted zone that operates 24/7, all year.</li>
+        <li>Petrol <span class="price">€1.99</span>/litre; always the <em>fai da te</em> pump. Budget <span class="price">€70–85</span> across the five days, split four ways.</li>
+        <li>A18 tolls: Catania–Taormina <span class="price">€1.80</span>.</li>
+        <li>Leave nothing visible in the parked car.</li>
+        <li>Add 20–40 minutes to satnav estimates.</li>
+      </ul>
+    </div>
+    <div class="box">
       <h3>Taxis</h3>
-      <p style="font-size:.92rem;margin-bottom:.5rem">Card payment is mandatory now, and two flat fares save you a fortune:</p>
       <dl class="kv">
-        <dt>€12</dt><dd>Flat, anywhere in the historic centre, 20:00–05:00, up to four people. Valid all year — this covers most of your nights.</dd>
-        <dt>€27</dt><dd>Flat, Piazza Duomo or the station to the airport.</dd>
-        <dt>€15–22</dt><dd>Centre to La Playa and Afrobar, metered, at night.</dd>
-        <dt>€20–28</dt><dd>Centre to Aci Castello and Banacher.</dd>
+        <dt>€12</dt><dd>Flat fare anywhere in the historic centre, 20:00–05:00, up to four people — covers most nights out</dd>
+        <dt>€27</dt><dd>Flat fare, centre ↔ airport</dd>
+        <dt>€15–22</dt><dd>Centre → La Playa / Afrobar, metered, night</dd>
+        <dt>€20–28</dt><dd>Centre → Aci Castello / Banacher</dd>
       </dl>
-      <p style="font-size:.89rem;margin:.65rem 0 0;color:var(--ink-2)">FreeNow and appTaxi both work. Uber only dispatches licensed taxis here; no Bolt. No night bus back from any club.</p>
+      <p style="font-size:.89rem;margin:.65rem 0 0;color:var(--ink-2)">FreeNow and appTaxi work; card payment is mandatory in all taxis. No night buses back from the clubs.</p>
     </div>
     <div class="box">
-      <h3>Driving</h3>
+      <h3>Sun, sea &amp; self-preservation</h3>
+      <dl class="kv">
+        <dt>Air</dt><dd><span class="mono">32°C</span> days · <span class="mono">23°C</span> nights</dd>
+        <dt>Sea</dt><dd><span class="mono">27°C</span></dd>
+        <dt>River</dt><dd><span class="mono">10–12°C</span> — very cold</dd>
+        <dt>Sunset</dt><dd><span class="mono">19:41</span> → <span class="mono">19:31</span> over the week</dd>
+      </dl>
+      <p style="font-size:.89rem;margin:.65rem 0 0;color:var(--ink-2)">Pickpockets work the fish market, Via Etnea crowds and buses — phones off café tables. Late at night stay on the Etnea–Duomo–Teatro Massimo axis, which is busy and lit.</p>
+    </div>
+    <div class="box">
+      <h3>Packing addendum</h3>
       <ul>
-        <li>Navigate to <strong>Via della Loggetta</strong>, never the flat. ZTL Bellini is enforced 24/7, all year.</li>
-        <li>Petrol is <span class="price">€1.99</span>/litre. Always the <em>fai da te</em> pump — <em>servito</em> adds <span class="price">€0.14–0.20</span>, motorway pumps reach <span class="price">€2.60</span>. Budget <span class="price">€70–85</span> of fuel across the five days.</li>
-        <li>A18 tolls are trivial: Catania–Taormina is <span class="price">€1.80</span>. Add 20–40 minutes to whatever Google says.</li>
-        <li>Nothing visible left in the car, anywhere, ever.</li>
+        <li><strong>River shoes or old trainers</strong> — mandatory at Cavagrande (they check), essential in the Gurne riverbed.</li>
+        <li>Snorkel masks — bought on Via Etnea, day one.</li>
+        <li>Fleece, windproof, long trousers, head torch — Monday's volcano kit.</li>
+        <li>Two-litre water bottle each for Wednesday; dry bag for Thursday.</li>
+        <li>Cash for the rafting balance; a card for Cavagrande, which takes nothing else.</li>
       </ul>
     </div>
     <div class="box">
-      <h3>Sun and sea</h3>
-      <dl class="kv">
-        <dt>Sunrise</dt><dd><span class="mono">06:22</span> on the 23rd, <span class="mono">06:28</span> by the 30th</dd>
-        <dt>Sunset</dt><dd><span class="mono">19:41</span> falling to <span class="mono">19:31</span></dd>
-        <dt>Air</dt><dd><span class="mono">32°C</span> days, <span class="mono">23°C</span> nights, <span class="mono">38–40°C</span> in a scirocco spell</dd>
-        <dt>Sea</dt><dd><span class="mono">27°C</span>. The Alcantara, by contrast, is <span class="mono">10–12°C</span></dd>
-        <dt>Storms</dt><dd>None in the city. They build fast on Etna, where lightning has killed more people than eruptions have</dd>
-      </dl>
-    </div>
-    <div class="box">
-      <h3>Kit worth having</h3>
+      <h3>Timekeeping</h3>
       <ul>
-        <li><strong>River shoes or old trainers</strong> — mandatory at Cavagrande, essential in the Gurne riverbed.</li>
-        <li>Snorkel masks, bought cheap on Via Etnea on day one.</li>
-        <li>Fleece, windproof and long trousers for Monday's tour; head torch for the lava cave.</li>
-        <li>Two-litre water bottles each for Wednesday, and a dry bag for the river.</li>
-        <li>Cash for the body rafting balance and the Larderia gate; a card for Cavagrande, which takes nothing else.</li>
+        <li>The fish market closes Sundays and Mondays by lunch; most museums close Mondays; shops shut 13:30–16:30.</li>
+        <li>Sunday buses run a reduced timetable — affects arrival and departure days.</li>
+        <li>Restaurants fill at 21:30. Booking two days out is the local norm for anywhere good.</li>
+        <li>Saturday's fixed point: <strong>car back at the airport by <span class="mono">19:00</span></strong>.</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section id="admin">
+  <div class="sechead"><h2>Admin — book before we fly</h2><span class="n">to assign</span></div>
+  <div class="call good">
+    <span class="lab">The list</span>
+    <dl class="kv">
+      <dt>1</dt><dd><strong>ANNA tickets, Villa Bellini, Fri 28, from <span class="price">€45</span></strong> — the fastest seller of the lot. TicketOne / TicketSMS.</dd>
+      <dt>2</dt><dd><strong>Body rafting, Thu 27, 10:00 slot</strong> — <span class="price">€45</span> pp, booked by phone/WhatsApp with the Alcantara operators (Sicily Adventure or Body Rafting Alcantara). Book "body rafting", not "river trekking" (the drier, tamer product).</dd>
+      <dt>3</dt><dd><strong>Etna wine tasting, Thu 27 ~18:45</strong> — Cottanera (from <span class="price">€40</span>) or Graci/Pietradolce. Not walk-in.</dd>
+      <dt>4</dt><dd><strong>Forestiero dinner, Wed 26</strong> — book two days ahead.</dd>
+      <dt>5</dt><dd><strong>Cavagrande status, Tue 25 afternoon</strong> — ring <span class="mono">0931 67450</span>; the reserve closes on red fire-risk days. If shut, Wednesday flips to a lie-in and Fontane Bianche.</dd>
+      <dt>6</dt><dd><strong>Banacher, Sat 29</strong> — reservation via <span class="mono">347 3723901</span> (12:30–21:30) if that's the pick; otherwise Capannine needs nothing.</dd>
+      <dt>7</dt><dd><strong>Afrobar guestlist</strong> — Instagram DM on the day, Monday and Friday.</dd>
+    </dl>
   </div>
 </section>
 
 <footer>
-  <p>Built 20 August 2026 · four people, five car days, one active volcano. Prices are published 2025–26 figures and will drift. Four things change without notice and must be checked on the day: Etna access, Cavagrande's fire-risk closures, body-rafting slot times, and club calendars.</p>
-  <p>Sources: INGV Osservatorio Etneo, 18 Aug 2026 · Parco dell'Etna mayoral ordinances · Parco Fluviale dell'Alcantara · Riserve Vendicari-Cavagrande-Pantalica · Sicily Adventure and Body Rafting Alcantara · Comune di Motta Camastra · Parco Archeologico Naxos-Taormina · Balarm and TicketSMS Catania listings · AMTS Catania · Comune di Catania · fuel-prices.eu.</p>
+  <p>Eight Days on the Ionian · Catania, 23–30 August 2026. Prices are current published figures and will drift; volcano access, reserve openings and club calendars change without notice. Check volcano status, reserve openings and club listings on the day.</p>
 </footer>
 
 </div>
+<script>
+(function(){
+  var el=document.getElementById('cd'); if(!el) return;
+  var now=new Date(), day=864e5;
+  var start=new Date(2026,7,23), end=new Date(2026,7,31);
+  if(now<start){
+    var s=Math.ceil((start-now)/day);
+    el.textContent=s+(s===1?' sleep to go':' sleeps to go');
+  }else if(now<end){
+    var n=Math.min(8,Math.floor((now-start)/day)+1);
+    var what=['snorkel day','volcano day','Taormina day','canyon day','river day','Ortigia day','beach day','departure day'][n-1];
+    el.textContent='Day '+n+' of 8 · '+what;
+  }else{
+    el.textContent='Trip complete';
+  }
+})();
+</script>
 </body>
 </html>
